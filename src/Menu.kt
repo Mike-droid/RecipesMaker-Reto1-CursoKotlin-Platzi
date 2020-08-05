@@ -1,3 +1,5 @@
+import model.*
+
 var opcion:String? = null
 
 fun main() {
@@ -24,7 +26,7 @@ fun leerOpcion(opcion:String){
 
     if(opcion=="1") {
         println("""
-            Tenemos los siguientes ingredientes:
+            Tenemos los siguientes tipos de ingredientes:
             1.Agua
             2.Leche
             3.Carne
@@ -38,7 +40,7 @@ fun leerOpcion(opcion:String){
     }
         else if (opcion == "2") {
             println("""
-            Tenemos los siguientes ingredientes:
+            Tenemos los siguientes tipos de ingredientes:
             1.Agua
             2.Leche
             3.Carne
@@ -55,14 +57,29 @@ fun leerOpcion(opcion:String){
 }
 
 fun leerIngrediente(ingrediente:String){
-    when(ingrediente){
-        "1" -> println("Recetas con agua: lorem")
-        "2" -> println("Recetas con leche: lorem")
-        "3" -> println("Recetas con carne: lorem")
-        "4" -> println("Recetas con huevos: lorem")
-        "5" -> println("Recetas con aceite: lorem")
-        "6" -> println("Recetas con verduras: lorem")
-        "7" -> println("Recetas con cereal: lorem")
-        "8" -> println("Recetas con frutas: lorem")
+    if (ingrediente == "1"){
+        var agua : Agua = Agua("Agua","Agua",true,10,"Sin color","Sin sabor","Sin olor")
+        agua.muestraDatosComida()
+    }else if (ingrediente=="2"){
+        var queso:Lacteos = Lacteos("Lacteos","Queso oaxaca",false,5,"Blanco amarilloso")
+        queso.muestraDatosComida()
+    }else if(ingrediente=="3"){
+        var pollo:Carnes = Carnes("Carne blanca","Pechuga de pollo",false,6,"Pollo","Blanco")
+        pollo.muestraDatosComida()
+    }else if(ingrediente=="4"){
+        var huevo:Huevos = Huevos("Huevos","Huevos",false,32,"Blanco")
+        huevo.muestraDatosComida()
+    }else if(ingrediente=="5"){
+        var aceite:Aceites = Aceites("Aceite","Aceite de oliva",false,4,"Dorado")
+        aceite.muestraDatosComida()
+    }else if(ingrediente=="6"){
+        var brocoli:Verduras = Verduras("Verduras","Brócoli",false,30,"Verde")
+        brocoli.muestraDatosComida()
+    }else if(ingrediente=="7"){
+        var trigo:Granos = Granos("Cereal/granos","Trigo",false,500,true,"Cafe")
+        trigo.muestraDatosComida()
+    }else if(ingrediente=="8"){
+        var platano : Frutas = Frutas("Fruta","Plátano",false,12,false,"Amarillo")
+        platano.muestraDatosComida()
     }
 }
