@@ -10,4 +10,6 @@ class Granos (tipoComida:String,
         super.muestraDatosComida()
         println("Tiene semillas: $tieneSemillas")
     }
+
+    val listaGranos = listOf<String>("Granola","Avena","Trigo")
 }

@@ -11,4 +11,6 @@ class Huevos (tipoComida: String,
         super.muestraDatosComida()
     }
 
+    val listaHuevos = listOf<String>("Blancos","Orgánicos")
+
 }

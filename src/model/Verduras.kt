@@ -9,4 +9,6 @@ class Verduras (tipoComida:String,
     override fun muestraDatosComida() {
         super.muestraDatosComida()
     }
+
+    val listaVerduras = listOf<String>("Lechuga","Tomate","Papa","Zanahoria","Brocoli")
 }

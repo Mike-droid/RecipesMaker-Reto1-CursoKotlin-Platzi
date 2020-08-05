@@ -12,4 +12,6 @@ class Carnes (tipoComida:String,
         println("Animal: $animal")
     }
 
+    val listaCarnes = listOf<String>("Res","Pollo","Atún","Cerdo")
+
 }

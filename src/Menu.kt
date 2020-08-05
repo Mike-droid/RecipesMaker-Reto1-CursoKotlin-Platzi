@@ -37,6 +37,9 @@ fun leerOpcion(opcion:String){
             8.Frutas
             ¿Con cuál deseas hacer una receta?
         """.trimIndent())
+        escogeReceta = readLine()
+        creaReceta(escogeReceta.toString())
+
     }
         else if (opcion == "2") {
             println("""
@@ -81,5 +84,52 @@ fun leerIngrediente(ingrediente:String){
     }else if(ingrediente=="8"){
         var platano : Frutas = Frutas("Fruta","Plátano",false,12,false,"Amarillo")
         platano.muestraDatosComida()
+    }
+}
+
+fun creaReceta(ingrediente: String){
+    var nombreReceta : String?=null
+    println("Escoge un nombre para tu receta: ")
+    nombreReceta = readLine()
+
+    var ingredienteExtra:String?=null
+    println("¿Qué otro(s) alimento(s) usarás?: ")
+    ingredienteExtra = readLine()
+
+    var recetaChida:Receta?=null
+
+    when(ingrediente){
+        "1" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Agua",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Agua",ingredienteExtra.toString())
+        }
+        "2" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Leche",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Leche",ingredienteExtra.toString())
+        }
+        "3" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Carne",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Carne",ingredienteExtra.toString())
+        }
+        "4" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Huevos",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Huevos",ingredienteExtra.toString())
+        }
+        "5" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Aceite",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Aceite",ingredienteExtra.toString())
+        }
+        "6" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Verduras",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Verduras",ingredienteExtra.toString())
+        }
+        "7" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Cereal/Granos",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Cereal/Granos",ingredienteExtra.toString())
+        }
+        "8" -> {
+            recetaChida = Receta(nombreReceta.toString(),"Frutas",ingredienteExtra.toString())
+            recetaChida.construyeReceta(nombreReceta.toString(),"Frutas",ingredienteExtra.toString())
+        }
     }
 }

@@ -9,4 +9,6 @@ class Aceites (tipoComida:String,
     override fun muestraDatosComida() {
         super.muestraDatosComida()
     }
+
+    val listaAceites = listOf<String>("Oliva","Vegetal")
 }

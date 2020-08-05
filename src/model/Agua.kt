@@ -8,6 +8,8 @@ class Agua (tipoComida:String,
             var sabor:String,
             var olor:String):Comida(tipoComida,nombreComida,esLiquido,cantidad,color){
 
+    class Agua(nombreComida: String)
+
     override fun muestraDatosComida() {
         super.muestraDatosComida()
         println("\n" +

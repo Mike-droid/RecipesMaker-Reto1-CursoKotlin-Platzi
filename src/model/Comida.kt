@@ -13,4 +13,6 @@ abstract class Comida (open var tipoComida:String,
                 "Cantidad: $cantidad \n" +
                 "Color: $color \n")
     }
+
+    class Comida(nombreComida: String)
 }

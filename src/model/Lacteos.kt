@@ -10,4 +10,6 @@ class Lacteos (tipoComida:String,
         super.muestraDatosComida()
     }
 
+    val listaLacteos = listOf<String>("Leche","Queso","Nieve")
+
 }

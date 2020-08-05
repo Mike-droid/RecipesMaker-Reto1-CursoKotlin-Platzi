@@ -21,13 +21,6 @@ class Frutas (tipoComida:String,
         this.tieneSemillas = sem
     }
 
-    /*fun datosFruta(){
-        println("Tipo de comida: $tipoComida \n" +
-                "Es líquido: $esLiquido \n" +
-                "Nombre de comida: $nombreComida \n" +
-                "Tiene semillas: $tieneSemillas \n" +
-                "Cantidad: $cantidad \n" +
-                "Color: $color")
-    }*/
+    val listaFrutas = listOf<String>("Manzana","Plátano","Fresa","Naranja","Uva")
 
 }
